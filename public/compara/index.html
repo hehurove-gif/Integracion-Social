@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compara candidaturas · Integración Social</title>
+  <meta name="description" content="Comparador neutral de candidaturas y propuestas para las elecciones de la Ciudad de México, con fuentes y estado de verificación.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#4e342e">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="demo-banner">
+    <div class="container">
+      <strong>MVP no oficial</strong>
+      <span>Contenido preliminar, pendiente de revisión editorial. No es una fuente oficial del INE, del IECM ni del gobierno.</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Integración Social, ir al inicio">
+        <img class="brand-mark" src="/assets/img/favicon.svg" alt="" width="42" height="42">
+        <span class="brand-text">
+          <span class="brand-name">Integración Social</span>
+          <span class="brand-sub">Educación ciudadana</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/aprende/">Aprende</a></li>
+          <li><a href="/compara/" aria-current="page">Compara candidaturas</a></li>
+          <li><a href="/seguimiento/">Seguimiento</a></li>
+          <li><a href="/metodologia/">Fuentes y metodología</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación"><ol><li><a href="/">Inicio</a></li><li aria-current="page">Compara candidaturas</li></ol></nav>
+        <h1>Compara candidaturas y propuestas</h1>
+        <p>Primer comparador para las elecciones que corresponden a la Ciudad de México. Muestra a la candidatura, al partido y a la coalición por separado, con fuente y estado de verificación.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="notice">
+          <p><strong>Estado actual:</strong> todavía no hay candidaturas registradas. Se prevé que el registro sea del 22 de marzo al 3 de abril de 2027 (según los calendarios del INE y del IECM consultados el 15 de noviembre de 2026; pueden cambiar). Mientras tanto, esta página muestra cómo se verá la comparación con <strong>datos ficticios de ejemplo</strong>.</p>
+        </div>
+        <div class="section-head"><h2>Antes de comparar: cuatro cosas distintas</h2></div>
+        <div class="grid">
+          <article class="card"><span class="badge">1</span><h3>Candidatura</h3><p>La persona que aspira al cargo. Tiene trayectoria, propuestas y responsabilidades propias.</p></article>
+          <article class="card"><span class="badge">2</span><h3>Partido</h3><p>La organización política que la postula.</p></article>
+          <article class="card"><span class="badge">3</span><h3>Coalición o candidatura común</h3><p>Formas en que varios partidos postulan juntos. No son equivalentes entre sí.</p></article>
+          <article class="card"><span class="badge">4</span><h3>Plataforma electoral</h3><p>Documento oficial de propuestas de un partido o coalición; no siempre coincide con el detalle de cada candidatura.</p></article>
+        </div>
+        <p class="small">Definiciones basadas en el micrositio del IECM: <a href="https://www.iecm.mx/www/sites/elecciones_2027/plataformas-electorales.html" rel="noopener noreferrer">plataformas electorales</a> y <a href="https://www.iecm.mx/www/sites/elecciones_2027/convenios-coalicion.html" rel="noopener noreferrer">convenios de coalición y candidatura común</a>.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="comparador">
+      <div class="container">
+        <div class="section-head"><h2>Comparador</h2><p>Elige la elección y, si quieres, un tema. Cada propuesta abre una ficha con texto original, competencia del cargo y fuente.</p></div>
+
+        <form class="compare-controls" id="compare-form" aria-label="Opciones del comparador">
+          <div class="field">
+            <label for="sel-eleccion">Elección<span class="hint">Cargo que quieres consultar</span></label>
+            <select id="sel-eleccion" name="eleccion"></select>
+          </div>
+          <div class="field">
+            <label for="sel-tema">Tema<span class="hint">Categoría común para todas las candidaturas</span></label>
+            <select id="sel-tema" name="tema"></select>
+          </div>
+          <div class="field">
+            <label class="check" for="chk-ejemplo"><input type="checkbox" id="chk-ejemplo" name="ejemplo" checked><span>Mostrar datos de ejemplo (ficticios)<span class="hint">Desmárcalo para ver los datos reales disponibles hoy.</span></span></label>
+          </div>
+        </form>
+
+        <div id="compare-output" aria-live="polite">
+          <noscript><p class="notice">Para usar el comparador activa JavaScript. Mientras tanto, consulta los <a href="/aprende/cargos/">cargos que se eligen en 2027</a>.</p></noscript>
+        </div>
+
+        <p class="small"><strong>¿Cómo sé qué distrito, circunscripción y sección me corresponden?</strong> Alcaldía, distrito, circunscripción y sección no son lo mismo. Consúltalo en el <a href="https://www.iecm.mx/www/scmgel/" rel="noopener noreferrer">Sistema de Consulta del Marco Geográfico Electoral Local del IECM</a>. Este sitio no te pide tu domicilio.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Solicitudes de información a las candidaturas</h2>
+          <p>Cuando una candidatura no entrega información, se le solicita por un canal documentado, con el mismo plazo para todas, y se registra la fecha, el medio y el resultado. La falta de respuesta no se interpreta como una postura ni como una conducta.</p>
+        </div>
+        <div id="requests-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head"><h2>Cómo leer una ficha</h2></div>
+        <ul>
+          <li><strong>Procedencia:</strong> distingue entre fuente oficial, plataforma electoral registrada, información proporcionada por la candidatura y entrevistas o declaraciones.</li>
+          <li><strong>Estado editorial:</strong> recibida, en revisión, verificada, incompleta o no verificable. Una propuesta recibida no es una propuesta validada.</li>
+          <li><strong>Competencia:</strong> indica si el cargo tiene facultad directa, compartida o depende de otras autoridades. <em>No es una calificación de viabilidad.</em></li>
+          <li><strong>«No proporcionado»:</strong> el dato no fue entregado ni localizado en la fuente; no se completa por inferencia.</li>
+        </ul>
+        <p>Más detalles en <a href="/metodologia/">Fuentes y metodología</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Integración Social</h2>
+          <p>Plataforma de educación ciudadana: explica cómo funciona el gobierno y permite comparar candidaturas y propuestas con fuentes verificables. No recomienda por quién votar.</p>
+        </div>
+        <div>
+          <h2>Aprende</h2>
+          <ul>
+            <li><a href="/aprende/derechos/">Derechos y obligaciones</a></li>
+            <li><a href="/aprende/poderes/">Poderes e instituciones</a></li>
+            <li><a href="/aprende/cargos/">Instituciones y cargos</a></li>
+            <li><a href="/aprende/leyes/">Cómo se hacen las leyes</a></li>
+            <li><a href="/aprende/niveles/">Quién responde de qué</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Plataforma</h2>
+          <ul>
+            <li><a href="/compara/">Compara candidaturas</a></li>
+            <li><a href="/seguimiento/">Seguimiento de compromisos</a></li>
+            <li><a href="/metodologia/">Fuentes y metodología</a></li>
+            <li><a href="/contacto/">Participa y contacto</a></li>
+            <li><a href="/legal/">Aviso legal y privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note">Contenidos elaborados el 15 de noviembre de 2026. Las fechas y normas electorales pueden cambiar; consulta siempre la fuente oficial vigente.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/compara.js" defer></script>
+</body>
+</html>

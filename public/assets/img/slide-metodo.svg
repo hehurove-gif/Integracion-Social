@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Documento con lupa que representa la revisión de fuentes">
+  <rect width="600" height="400" rx="18" fill="#3e2a1e"/>
+  <rect x="140" y="50" width="240" height="300" rx="10" fill="#faf6f1"/>
+  <rect x="170" y="90" width="150" height="12" rx="4" fill="#bcaaa4"/>
+  <rect x="170" y="125" width="180" height="10" rx="4" fill="#d7ccc8"/>
+  <rect x="170" y="150" width="180" height="10" rx="4" fill="#d7ccc8"/>
+  <rect x="170" y="175" width="120" height="10" rx="4" fill="#d7ccc8"/>
+  <rect x="170" y="215" width="180" height="10" rx="4" fill="#d7ccc8"/>
+  <rect x="170" y="240" width="150" height="10" rx="4" fill="#d7ccc8"/>
+  <circle cx="400" cy="230" r="62" fill="none" stroke="#b9772b" stroke-width="16"/>
+  <line x1="446" y1="276" x2="500" y2="330" stroke="#b9772b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M376 230l18 18 32-38" fill="none" stroke="#f6e7d2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

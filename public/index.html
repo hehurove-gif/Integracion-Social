@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nombre del sitio</title>
+  <title>Integración Social</title>
+  <meta name="description" content="Plataforma de educación ciudadana: cómo funciona el gobierno mexicano y comparador neutral de candidaturas para la Ciudad de México.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#4e342e">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
@@ -12,23 +13,30 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <div class="demo-banner">
+    <div class="container">
+      <strong>MVP no oficial</strong>
+      <span>Contenido preliminar, pendiente de revisión editorial. No es una fuente oficial del INE, del IECM ni del gobierno.</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Nombre del sitio, ir al inicio">
+      <a class="brand" href="/" aria-label="Integración Social, ir al inicio">
         <img class="brand-mark" src="/assets/img/favicon.svg" alt="" width="42" height="42">
         <span class="brand-text">
-          <span class="brand-name">Nombre del sitio</span>
+          <span class="brand-name">Integración Social</span>
+          <span class="brand-sub">Educación ciudadana</span>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
       <nav class="site-nav" id="site-nav" aria-label="Principal">
         <ul>
           <li><a href="/" aria-current="page">Inicio</a></li>
-          <li><a href="/listado/">Listado</a></li>
-          <li><a href="/detalle/">Detalle</a></li>
-          <li><a href="/formulario/">Formulario</a></li>
-          <li><a href="/consulta/">Consulta</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
+          <li><a href="/aprende/">Aprende</a></li>
+          <li><a href="/compara/">Compara candidaturas</a></li>
+          <li><a href="/seguimiento/">Seguimiento</a></li>
+          <li><a href="/metodologia/">Fuentes y metodología</a></li>
         </ul>
       </nav>
     </div>
@@ -37,37 +45,115 @@
   <main id="contenido" tabindex="-1">
     <section class="hero">
       <div class="container">
-        <h1>Título principal</h1>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section-head"><h2>Sección 1</h2></div>
-        <div class="grid">
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
+        <span class="eyebrow">Educación ciudadana · México</span>
+        <h1>Entiende el gobierno. Compara propuestas con fuentes.</h1>
+        <p>Una plataforma para comprender cómo funcionan las instituciones, qué hace cada cargo y qué proponen las candidaturas de la Ciudad de México. No te decimos por quién votar.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/aprende/">Empieza a aprender</a>
+          <a class="btn secondary" href="/compara/">Ver el comparador</a>
         </div>
       </div>
     </section>
+
+    <section class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Contenidos destacados">
+      <h2 class="visually-hidden">Contenidos destacados</h2>
+      <div class="carousel-slides">
+        <article class="slide is-active" role="group" aria-roledescription="diapositiva" aria-label="1 de 4">
+          <div class="container slide-inner">
+            <div class="slide-text">
+              <span class="eyebrow">Aprende</span>
+              <h2>Entiende cómo funciona el gobierno</h2>
+              <p>Poderes, instituciones y decisiones públicas explicados en lenguaje sencillo y con diagramas.</p>
+              <a class="btn" href="/aprende/">Empezar a aprender</a>
+            </div>
+            <div class="slide-media"><img src="/assets/img/slide-gobierno.svg" alt="" width="600" height="400"></div>
+          </div>
+        </article>
+        <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 4">
+          <div class="container slide-inner">
+            <div class="slide-text">
+              <span class="eyebrow">Elecciones 2027</span>
+              <h2>¿Qué hace cada cargo que se elige en la CDMX?</h2>
+              <p>Diputaciones federales y locales, alcaldías y concejalías: qué pueden y qué no pueden hacer.</p>
+              <a class="btn" href="/aprende/cargos/">Ver los cargos</a>
+            </div>
+            <div class="slide-media"><img src="/assets/img/slide-cargos.svg" alt="" width="600" height="400" loading="lazy"></div>
+          </div>
+        </article>
+        <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4">
+          <div class="container slide-inner">
+            <div class="slide-text">
+              <span class="eyebrow">Compara</span>
+              <h2>Compara candidaturas con las mismas reglas</h2>
+              <p>Una tabla por tema, con partido y coalición por separado, fuentes y qué autoridades intervendrían.</p>
+              <a class="btn" href="/compara/">Abrir el comparador</a>
+            </div>
+            <div class="slide-media"><img src="/assets/img/slide-compara.svg" alt="" width="600" height="400" loading="lazy"></div>
+          </div>
+        </article>
+        <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 4">
+          <div class="container slide-inner">
+            <div class="slide-text">
+              <span class="eyebrow">Transparencia</span>
+              <h2>Cada dato tiene fuente y los vacíos se muestran</h2>
+              <p>Principios editoriales, calendario electoral, fuentes oficiales y registro de correcciones.</p>
+              <a class="btn" href="/metodologia/">Cómo trabajamos</a>
+            </div>
+            <div class="slide-media"><img src="/assets/img/slide-metodo.svg" alt="" width="600" height="400" loading="lazy"></div>
+          </div>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" data-prev aria-label="Diapositiva anterior">←</button>
+        <div class="carousel-dots"></div>
+        <span class="carousel-status visually-hidden" aria-live="polite"></span>
+        <button type="button" class="carousel-btn" data-next aria-label="Diapositiva siguiente">→</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>¿Qué quieres aprender o consultar?</h2>
+          <p>Elige un tema. Todos los contenidos educativos tienen nivel básico, intermedio y práctico.</p>
+        </div>
+        <div class="grid">
+          <a class="card" href="/aprende/derechos/"><span class="card-icon" aria-hidden="true">📜</span><h3>Derechos y obligaciones</h3><p>Qué te reconoce la Constitución y a dónde acudir si no se respeta.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/aprende/poderes/"><span class="card-icon" aria-hidden="true">🏛️</span><h3>Entiende el gobierno</h3><p>Los tres poderes y los organismos autónomos, con diagrama.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/aprende/cargos/"><span class="card-icon" aria-hidden="true">🗳️</span><h3>Instituciones y cargos</h3><p>Qué hace cada cargo y de quién depende para cumplir lo que propone.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/aprende/leyes/"><span class="card-icon" aria-hidden="true">📝</span><h3>Cómo se toman las decisiones</h3><p>El camino de una ley y del presupuesto público.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/compara/"><span class="card-icon" aria-hidden="true">⚖️</span><h3>Compara candidaturas</h3><p>Tabla comparativa por tema para las elecciones de la CDMX.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/seguimiento/"><span class="card-icon" aria-hidden="true">📈</span><h3>Seguimiento de compromisos</h3><p>Cómo se contrastarán las promesas con evidencia después de la elección.</p><span class="card-link">Entrar →</span></a>
+          <a class="card" href="/metodologia/"><span class="card-icon" aria-hidden="true">🔎</span><h3>Fuentes y metodología</h3><p>Principios de neutralidad, calendario, fuentes y correcciones.</p><span class="card-link">Entrar →</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt">
       <div class="container">
-        <div class="section-head"><h2>Sección 2</h2></div>
-        <div class="grid">
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
+        <div class="section-head">
+          <h2>Elecciones 2027 en la Ciudad de México, de un vistazo</h2>
+          <p>Cifras y fechas de referencia consultadas el 15 de noviembre de 2026. Pueden cambiar: reconfírmalas en las fuentes oficiales.</p>
         </div>
+        <div class="grid">
+          <article class="card"><span class="stat-number">6 jun 2027</span><h3>Jornada electoral</h3><p>Fecha programada por el INE y el IECM.</p></article>
+          <article class="card"><span class="stat-number">500</span><h3>Diputaciones federales</h3><p>300 de mayoría relativa y 200 de representación proporcional. No se elige la Presidencia.</p></article>
+          <article class="card"><span class="stat-number">286</span><h3>Cargos locales en la CDMX</h3><p>16 alcaldías, 204 concejalías y 66 diputaciones locales.</p></article>
+        </div>
+        <p class="small">Fuentes: <a href="https://www.ine.mx/elecciones-2027/" rel="noopener noreferrer">INE: Elecciones 2027</a> · <a href="https://www.iecm.mx/inicia-proceso-electoral-local-ordinario-2026-2027/" rel="noopener noreferrer">IECM: inicio del proceso local</a>. Ver el <a href="/metodologia/#calendario">calendario de referencia</a>.</p>
       </div>
     </section>
+
     <section class="section">
       <div class="container">
-        <div class="section-head"><h2>Sección 3</h2></div>
-        <div class="grid">
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
-          <article class="card"><h3>Elemento</h3></article>
-        </div>
+        <div class="section-head"><h2>Cómo cuidamos la neutralidad</h2></div>
+        <ol class="steps">
+          <li><strong>Mismas reglas para todas</strong>Mismos campos, plazos y criterios para todas las candidaturas.</li>
+          <li><strong>Cada dato con fuente</strong>Fecha de consulta, procedencia y estado de verificación a la vista.</li>
+          <li><strong>Los vacíos se muestran</strong>Si no hay información, lo decimos; no lo rellenamos ni lo interpretamos.</li>
+          <li><strong>Sin rankings ni recomendaciones</strong>No hay puntuaciones ni «mejor candidatura».</li>
+        </ol>
+        <p><a class="btn outline" href="/metodologia/">Leer la metodología completa</a></p>
       </div>
     </section>
   </main>
@@ -76,25 +162,31 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h2>Nombre del sitio</h2>
+          <h2>Integración Social</h2>
+          <p>Plataforma de educación ciudadana: explica cómo funciona el gobierno y permite comparar candidaturas y propuestas con fuentes verificables. No recomienda por quién votar.</p>
         </div>
         <div>
-          <h2>Navegación</h2>
+          <h2>Aprende</h2>
           <ul>
-            <li><a href="/listado/">Listado</a></li>
-            <li><a href="/detalle/">Detalle</a></li>
-            <li><a href="/formulario/">Formulario</a></li>
+            <li><a href="/aprende/derechos/">Derechos y obligaciones</a></li>
+            <li><a href="/aprende/poderes/">Poderes e instituciones</a></li>
+            <li><a href="/aprende/cargos/">Instituciones y cargos</a></li>
+            <li><a href="/aprende/leyes/">Cómo se hacen las leyes</a></li>
+            <li><a href="/aprende/niveles/">Quién responde de qué</a></li>
           </ul>
         </div>
         <div>
-          <h2>Enlaces</h2>
+          <h2>Plataforma</h2>
           <ul>
-            <li><a href="/consulta/">Consulta</a></li>
-            <li><a href="/contacto/">Contacto</a></li>
-            <li><a href="/legal/">Legal</a></li>
+            <li><a href="/compara/">Compara candidaturas</a></li>
+            <li><a href="/seguimiento/">Seguimiento de compromisos</a></li>
+            <li><a href="/metodologia/">Fuentes y metodología</a></li>
+            <li><a href="/contacto/">Participa y contacto</a></li>
+            <li><a href="/legal/">Aviso legal y privacidad</a></li>
           </ul>
         </div>
       </div>
+      <p class="footer-note">Contenidos elaborados el 15 de noviembre de 2026. Las fechas y normas electorales pueden cambiar; consulta siempre la fuente oficial vigente.</p>
     </div>
   </footer>
 

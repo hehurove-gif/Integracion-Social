@@ -2,29 +2,33 @@
 
 Esqueleto de sitio **estático** con paleta café: solo títulos y secciones, sin contenido. Sin frameworks ni build. Listo para desplegar en **Cloudflare** con `wrangler`.
 
-## Páginas
+## Páginas (MVP)
 
-| Ruta | Estructura |
+| Ruta | Contenido |
 | --- | --- |
-| `/` | Título principal + Secciones 1 a 3 |
-| `/listado/` | Filtros + Resultados |
-| `/detalle/` | Secciones 1 a 4 + panel lateral |
-| `/formulario/` | Secciones 1 y 2 |
-| `/consulta/` | Búsqueda + Resultado |
-| `/contacto/` | Secciones 1 y 2 |
-| `/legal/` | Secciones 1 a 3 |
-| `/404.html` | Página no encontrada |
+| `/` | Inicio: carrusel, menú temático, datos de las elecciones 2027 |
+| `/aprende/` | Hub del Módulo 1 y 5 temas con niveles básico/intermedio/práctico: `derechos`, `poderes`, `cargos`, `leyes`, `niveles` |
+| `/compara/` | Módulo 2: comparador de candidaturas CDMX (tabla, fichas, solicitudes de información) |
+| `/seguimiento/` | Módulo 3: estados y reglas de seguimiento (aún sin compromisos) |
+| `/metodologia/` | Principios editoriales, fuentes, calendario, historial de correcciones |
+| `/contacto/`, `/legal/`, `/404.html` | Participación, aviso legal y privacidad |
+
+## Datos del comparador
+
+`public/assets/data/comparador.json`: `ejemplo` contiene datos **ficticios**; `real` está vacío y es donde el equipo editorial captura candidaturas, propuestas y solicitudes verificadas (campos según la investigación preliminar). Registra cada cambio en el historial de `/metodologia/`.
 
 ## Estructura
 
 ```
-public/                 # Lo que se publica
-  assets/css/styles.css # Paleta en variables :root (--brown-*, --accent*)
-  assets/js/main.js     # Menú móvil
-  _headers, robots.txt  # Cabeceras de seguridad y bloqueo de indexación
-templates/
-  pagina-base.html      # Copia esto para crear una página nueva (no se publica)
-wrangler.jsonc          # Config de Cloudflare (assets estáticos)
+public/
+  assets/css/styles.css      # Paleta y componentes
+  assets/js/main.js          # Menú, carrusel, niveles de lectura
+  assets/js/compara.js       # Comparador (lee el JSON)
+  assets/data/comparador.json
+  assets/img/                # Favicon e ilustraciones del carrusel
+  _headers, robots.txt
+templates/pagina-base.html   # Copia esto para una página nueva (no se publica)
+wrangler.jsonc
 ```
 
 ## Desarrollo local
@@ -47,4 +51,4 @@ Desde el panel (Workers Builds): build command vacío, deploy command `npx wrang
 
 - La CSP de `_headers` no permite scripts ni estilos en línea; usa archivos en `assets/`.
 - `robots.txt`, la etiqueta `noindex` y `X-Robots-Tag` bloquean la indexación; quítalos al publicar.
-- Al agregar una página, añádela también al menú del encabezado.
+- Al agregar una página, añádela también al menú del encabezado y al pie de cada página (el sitio no tiene build).

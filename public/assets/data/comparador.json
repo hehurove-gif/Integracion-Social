@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "actualizado": "2026-11-15",
+    "aviso_ejemplo": "Los nombres, partidos, coaliciones, propuestas y fechas de este conjunto de datos son FICTICIOS. Sirven solo para mostrar cómo se verá el comparador cuando existan candidaturas registradas."
+  },
+  "registro_candidaturas": "Se prevé que el registro de candidaturas ocurra del 22 de marzo al 3 de abril de 2027, según los calendarios del INE y del IECM consultados el 15 de noviembre de 2026. Las fechas pueden cambiar.",
+  "elecciones": [
+    {
+      "id": "alcaldia",
+      "nombre": "Alcaldía (titularidad)",
+      "cargo": "Titularidad de la alcaldía",
+      "hace": "Gobierna y administra la demarcación territorial junto con el Concejo; presta servicios y realiza obras locales, como alumbrado y mantenimiento de vialidades secundarias.",
+      "necesita": "Depende del Gobierno de la Ciudad de México en temas de su competencia (por ejemplo, vialidades primarias, agua o seguridad pública) y del presupuesto que apruebe el Congreso local.",
+      "ambito": "Demarcación territorial (16 en la CDMX)."
+    },
+    {
+      "id": "concejalia",
+      "nombre": "Concejalías",
+      "cargo": "Concejalía",
+      "hace": "Integra el Concejo de la alcaldía: supervisa y evalúa las acciones de gobierno y participa en la aprobación del presupuesto de la alcaldía.",
+      "necesita": "No ejecuta obras ni servicios por sí misma; trabaja con la titularidad de la alcaldía y el resto del Concejo.",
+      "ambito": "Circunscripción dentro de una demarcación (121 en la CDMX)."
+    },
+    {
+      "id": "dip-local",
+      "nombre": "Diputación local (Congreso de la CDMX)",
+      "cargo": "Diputación del Congreso de la Ciudad de México",
+      "hace": "Forma parte del Congreso de la Ciudad de México: legisla en materias locales y aprueba el presupuesto de la ciudad.",
+      "necesita": "Las leyes se aprueban por mayoría del Congreso y las publica la Jefatura de Gobierno; la ejecución depende del gobierno local.",
+      "ambito": "Distrito local (33 de mayoría relativa) o lista de representación proporcional."
+    },
+    {
+      "id": "dip-federal",
+      "nombre": "Diputación federal (Cámara de Diputados)",
+      "cargo": "Diputación federal",
+      "hace": "Forma parte de la Cámara de Diputados: discute y aprueba leyes junto con el Senado y aprueba cada año el Presupuesto de Egresos de la Federación.",
+      "necesita": "Una ley requiere también al Senado y la publicación por parte de la Presidencia; la ejecución corresponde al gobierno federal.",
+      "ambito": "Distrito federal (mayoría relativa) o circunscripción plurinominal (representación proporcional)."
+    }
+  ],
+  "temas": [
+    { "id": "seguridad", "nombre": "Seguridad" },
+    { "id": "movilidad", "nombre": "Movilidad y vialidades" },
+    { "id": "agua", "nombre": "Agua y servicios urbanos" },
+    { "id": "salud", "nombre": "Salud" }
+  ],
+  "competencias": {
+    "directa": "Facultad directa del cargo",
+    "compartida": "Facultad compartida con otras autoridades",
+    "indirecta": "Depende de otras autoridades"
+  },
+  "procedencias": {
+    "oficial": "Fuente oficial",
+    "plataforma": "Plataforma electoral registrada",
+    "candidatura": "Proporcionada por la candidatura",
+    "entrevista": "Entrevista o declaración pública"
+  },
+  "estados_editoriales": {
+    "recibida": "Recibida",
+    "en-revision": "En revisión",
+    "verificada": "Verificada",
+    "incompleta": "Incompleta",
+    "no-verificable": "No verificable"
+  },
+  "estados_info": {
+    "proporcionada": "Información proporcionada por la candidatura",
+    "pendiente": "Solicitada, pendiente de respuesta",
+    "sin-respuesta": "Solicitud sin respuesta al vencer el plazo"
+  },
+  "ejemplo": {
+    "candidaturas": [
+      {
+        "id": "alc-a",
+        "eleccion": "alcaldia",
+        "nombre": "Candidatura Ejemplo A",
+        "partido": "Partido Ejemplo 1",
+        "coalicion": "Coalición Ejemplo Alfa (Partido Ejemplo 1 y Partido Ejemplo 3)",
+        "plataforma": "Plataforma Ejemplo Alfa",
+        "estado_info": "proporcionada"
+      },
+      {
+        "id": "alc-b",
+        "eleccion": "alcaldia",
+        "nombre": "Candidatura Ejemplo B",
+        "partido": "Partido Ejemplo 2",
+        "coalicion": null,
+        "plataforma": "Plataforma Ejemplo del Partido 2",
+        "estado_info": "proporcionada"
+      },
+      {
+        "id": "alc-c",
+        "eleccion": "alcaldia",
+        "nombre": "Candidatura Ejemplo C",
+        "partido": "Partido Ejemplo 4",
+        "coalicion": null,
+        "plataforma": null,
+        "estado_info": "sin-respuesta"
+      },
+      {
+        "id": "df-d",
+        "eleccion": "dip-federal",
+        "nombre": "Candidatura Ejemplo D",
+        "partido": "Partido Ejemplo 5",
+        "coalicion": null,
+        "plataforma": "Plataforma Ejemplo del Partido 5",
+        "estado_info": "proporcionada"
+      },
+      {
+        "id": "df-e",
+        "eleccion": "dip-federal",
+        "nombre": "Candidatura Ejemplo E",
+        "partido": "Partido Ejemplo 6",
+        "coalicion": "Candidatura común Ejemplo (Partido Ejemplo 6 y Partido Ejemplo 7)",
+        "plataforma": "Plataforma Ejemplo de la candidatura común",
+        "estado_info": "pendiente"
+      }
+    ],
+    "propuestas": [
+      {
+        "id": "p-a-mov",
+        "candidatura": "alc-a",
+        "tema": "movilidad",
+        "resumen": "Ampliar el programa de bacheo y reparar el alumbrado de las calles secundarias de la demarcación.",
+        "texto_original": "«Texto ficticio: Reforzaremos el bacheo y el alumbrado en todas las colonias.»",
+        "accion": "Programa permanente de bacheo y sustitución de luminarias en vialidades secundarias.",
+        "competencia": "directa",
+        "competencia_nota": "Las alcaldías se encargan del alumbrado y de las vialidades secundarias de su demarcación.",
+        "instituciones": "Alcaldía.",
+        "presupuesto": null,
+        "plazo": "Durante el periodo de gobierno (ejemplo).",
+        "indicador": null,
+        "procedencia": "plataforma",
+        "estado": "verificada",
+        "fuente": { "titulo": "Documento ficticio de ejemplo", "fecha_consulta": "2027-04-12 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-a-seg",
+        "candidatura": "alc-a",
+        "tema": "seguridad",
+        "resumen": "Instalar cámaras de videovigilancia comunitarias en puntos acordados con las vecinas y los vecinos.",
+        "texto_original": "«Texto ficticio: Cámaras comunitarias en cada colonia, con participación vecinal.»",
+        "accion": "Instalación de cámaras y mecanismo de consulta vecinal para elegir ubicaciones.",
+        "competencia": "compartida",
+        "competencia_nota": "La seguridad pública corresponde principalmente al Gobierno de la Ciudad de México; la alcaldía puede coordinarse y aportar recursos.",
+        "instituciones": "Alcaldía; Secretaría de Seguridad Ciudadana de la CDMX.",
+        "presupuesto": null,
+        "plazo": null,
+        "indicador": "Número de cámaras instaladas (propuesto por la candidatura).",
+        "procedencia": "candidatura",
+        "estado": "en-revision",
+        "fuente": { "titulo": "Respuesta ficticia a solicitud de información", "fecha_consulta": "2027-04-14 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-b-mov",
+        "candidatura": "alc-b",
+        "tema": "movilidad",
+        "resumen": "Construir ciclovías en las avenidas principales que cruzan la demarcación.",
+        "texto_original": "«Texto ficticio: Ciclovías seguras en las avenidas principales.»",
+        "accion": "Diseño y construcción de ciclovías en avenidas principales.",
+        "competencia": "indirecta",
+        "competencia_nota": "Las vialidades primarias están a cargo del Gobierno de la Ciudad de México; la alcaldía tendría que coordinarse con él.",
+        "instituciones": "Alcaldía; Gobierno de la Ciudad de México.",
+        "presupuesto": null,
+        "plazo": null,
+        "indicador": null,
+        "procedencia": "plataforma",
+        "estado": "incompleta",
+        "fuente": { "titulo": "Documento ficticio de ejemplo", "fecha_consulta": "2027-04-12 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-b-agua",
+        "candidatura": "alc-b",
+        "tema": "agua",
+        "resumen": "Dar mantenimiento a la red secundaria de agua para reducir fugas en colonias de la demarcación.",
+        "texto_original": "«Texto ficticio: Menos fugas, más agua en tu colonia.»",
+        "accion": "Programa de detección y reparación de fugas.",
+        "competencia": "indirecta",
+        "competencia_nota": "El servicio de agua potable lo opera el Sistema de Aguas de la Ciudad de México; la alcaldía tendría que coordinarse con esa autoridad.",
+        "instituciones": "Alcaldía; Sistema de Aguas de la Ciudad de México.",
+        "presupuesto": null,
+        "plazo": null,
+        "indicador": null,
+        "procedencia": "candidatura",
+        "estado": "recibida",
+        "fuente": { "titulo": "Respuesta ficticia a solicitud de información", "fecha_consulta": "2027-04-14 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-d-salud",
+        "candidatura": "df-d",
+        "tema": "salud",
+        "resumen": "Impulsar una reforma legal para asegurar el abasto de medicamentos en hospitales federales.",
+        "texto_original": "«Texto ficticio: Propondré reformas para que no falten medicinas en los hospitales.»",
+        "accion": "Presentar una iniciativa de reforma en la Cámara de Diputados.",
+        "competencia": "compartida",
+        "competencia_nota": "Las diputaciones pueden presentar iniciativas, pero una ley requiere la aprobación de ambas Cámaras y la publicación por la Presidencia; el abasto depende del gobierno federal.",
+        "instituciones": "Cámara de Diputados; Senado; Presidencia; instituciones de salud federales.",
+        "presupuesto": null,
+        "plazo": null,
+        "indicador": null,
+        "procedencia": "plataforma",
+        "estado": "verificada",
+        "fuente": { "titulo": "Documento ficticio de ejemplo", "fecha_consulta": "2027-04-12 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-d-seg",
+        "candidatura": "df-d",
+        "tema": "seguridad",
+        "resumen": "Reformar la ley para fortalecer el intercambio de datos entre fiscalías.",
+        "texto_original": "«Texto ficticio: Mejor coordinación de datos entre fiscalías.»",
+        "accion": "Presentar una iniciativa de reforma legal.",
+        "competencia": "compartida",
+        "competencia_nota": "El Congreso puede legislar la materia; la operación corresponde a las fiscalías, que son autónomas.",
+        "instituciones": "Cámara de Diputados; Senado; fiscalías.",
+        "presupuesto": null,
+        "plazo": null,
+        "indicador": null,
+        "procedencia": "candidatura",
+        "estado": "no-verificable",
+        "fuente": { "titulo": "Entrevista ficticia", "fecha_consulta": "2027-04-20 (ejemplo)", "url": null }
+      },
+      {
+        "id": "p-e-salud",
+        "candidatura": "df-e",
+        "tema": "salud",
+        "resumen": "Aumentar el presupuesto federal destinado a la atención primaria de la salud.",
+        "texto_original": "«Texto ficticio: Más presupuesto para los centros de salud.»",
+        "accion": "Votar a favor de asignar más recursos a atención primaria al aprobar el Presupuesto de Egresos.",
+        "competencia": "compartida",
+        "competencia_nota": "La Presidencia propone el presupuesto y la Cámara de Diputados lo aprueba; una sola diputación no decide el monto.",
+        "instituciones": "Cámara de Diputados; Presidencia.",
+        "presupuesto": null,
+        "plazo": "Cada ejercicio fiscal (ejemplo).",
+        "indicador": null,
+        "procedencia": "plataforma",
+        "estado": "en-revision",
+        "fuente": { "titulo": "Documento ficticio de ejemplo", "fecha_consulta": "2027-04-12 (ejemplo)", "url": null }
+      }
+    ],
+    "solicitudes": [
+      {
+        "candidatura": "alc-a",
+        "eleccion": "alcaldia",
+        "fecha": "2027-04-05 (ejemplo)",
+        "medio": "Correo electrónico institucional (ejemplo)",
+        "plazo": "10 días naturales (ejemplo)",
+        "resultado": "Respuesta recibida el 2027-04-14 (ejemplo)."
+      },
+      {
+        "candidatura": "alc-b",
+        "eleccion": "alcaldia",
+        "fecha": "2027-04-05 (ejemplo)",
+        "medio": "Correo electrónico institucional (ejemplo)",
+        "plazo": "10 días naturales (ejemplo)",
+        "resultado": "Respuesta recibida el 2027-04-14 (ejemplo)."
+      },
+      {
+        "candidatura": "alc-c",
+        "eleccion": "alcaldia",
+        "fecha": "2027-04-05 (ejemplo)",
+        "medio": "Correo electrónico institucional (ejemplo)",
+        "plazo": "10 días naturales (ejemplo)",
+        "resultado": "No se localizó respuesta al vencer el plazo (ejemplo). Esto no se interpreta como una postura de la candidatura."
+      },
+      {
+        "candidatura": "df-d",
+        "eleccion": "dip-federal",
+        "fecha": "2027-04-05 (ejemplo)",
+        "medio": "Correo electrónico institucional (ejemplo)",
+        "plazo": "10 días naturales (ejemplo)",
+        "resultado": "Respuesta recibida el 2027-04-16 (ejemplo)."
+      },
+      {
+        "candidatura": "df-e",
+        "eleccion": "dip-federal",
+        "fecha": "2027-04-18 (ejemplo)",
+        "medio": "Correo electrónico institucional (ejemplo)",
+        "plazo": "10 días naturales (ejemplo)",
+        "resultado": "Plazo vigente; pendiente de respuesta (ejemplo)."
+      }
+    ]
+  },
+  "real": {
+    "candidaturas": [],
+    "propuestas": [],
+    "solicitudes": []
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Urna con una boleta que representa los cargos que se eligen">
+  <rect width="600" height="400" rx="18" fill="#6d4c41"/>
+  <rect x="190" y="60" width="150" height="190" rx="8" fill="#faf6f1" transform="rotate(-8 265 155)"/>
+  <rect x="215" y="95" width="100" height="10" rx="3" fill="#bcaaa4" transform="rotate(-8 265 100)"/>
+  <rect x="215" y="125" width="100" height="10" rx="3" fill="#bcaaa4" transform="rotate(-8 265 130)"/>
+  <rect x="215" y="155" width="70" height="10" rx="3" fill="#bcaaa4" transform="rotate(-8 250 160)"/>
+  <rect x="140" y="215" width="320" height="140" rx="12" fill="#efebe9"/>
+  <rect x="215" y="235" width="170" height="16" rx="8" fill="#4e342e"/>
+  <rect x="140" y="300" width="320" height="14" fill="#b9772b"/>
+  <path d="M470 120l18 18 34-40" fill="none" stroke="#f6e7d2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

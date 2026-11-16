@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Edificio con columnas que representa las instituciones del gobierno">
+  <rect width="600" height="400" rx="18" fill="#5d4037"/>
+  <circle cx="470" cy="90" r="46" fill="#b9772b" opacity="0.9"/>
+  <path d="M120 170 300 70l180 100v22H120z" fill="#efebe9"/>
+  <rect x="150" y="205" width="40" height="110" fill="#efebe9"/>
+  <rect x="230" y="205" width="40" height="110" fill="#efebe9"/>
+  <rect x="330" y="205" width="40" height="110" fill="#efebe9"/>
+  <rect x="410" y="205" width="40" height="110" fill="#efebe9"/>
+  <rect x="110" y="325" width="380" height="22" rx="4" fill="#b9772b"/>
+  <rect x="90" y="352" width="420" height="16" rx="4" fill="#d7ccc8"/>
+</svg>
