@@ -2,7 +2,7 @@
   "name": "integracion-social",
   "version": "0.1.0",
   "private": true,
-  "description": "MVP no oficial: sitio estático de trámites y apoyos sociales (paleta café) para Cloudflare.",
+  "description": "Esqueleto de sitio estático (paleta café) para Cloudflare.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"

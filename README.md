@@ -1,32 +1,27 @@
-# Integración Social (MVP no oficial)
+# Integración Social
 
-Plantilla de sitio **estático** para una plataforma administrativa de trámites y apoyos sociales. Paleta café, sin frameworks ni build, lista para desplegar en **Cloudflare** con `wrangler`.
-
-> Es un prototipo con fines de demostración. No es un sitio oficial ni representa a ninguna dependencia. Todo el contenido (trámites, folios, avisos) es de ejemplo.
+Esqueleto de sitio **estático** con paleta café: solo títulos y secciones, sin contenido. Sin frameworks ni build. Listo para desplegar en **Cloudflare** con `wrangler`.
 
 ## Páginas
 
-| Ruta | Descripción |
+| Ruta | Estructura |
 | --- | --- |
-| `/` | Inicio: hero, accesos rápidos, pasos y avisos |
-| `/tramites/` | Listado con búsqueda y filtro por categoría |
-| `/tramites/<slug>/` | Detalle de trámite (requisitos, pasos, datos clave) |
-| `/programas/` | Programas y apoyos |
-| `/seguimiento/` | Consulta de folio (demo: `IS-2026-0001`, `0002`, `0003`) |
-| `/faq/` | Preguntas frecuentes |
-| `/contacto/` | Formulario de contacto (demo, no envía datos) |
-| `/aviso-de-privacidad/` | Plantilla de aviso de privacidad |
-| `/404.html` | Página de error |
+| `/` | Título principal + Secciones 1 a 3 |
+| `/listado/` | Filtros + Resultados |
+| `/detalle/` | Secciones 1 a 4 + panel lateral |
+| `/formulario/` | Secciones 1 y 2 |
+| `/consulta/` | Búsqueda + Resultado |
+| `/contacto/` | Secciones 1 y 2 |
+| `/legal/` | Secciones 1 a 3 |
+| `/404.html` | Página no encontrada |
 
 ## Estructura
 
 ```
 public/                 # Lo que se publica
-  index.html, tramites/, programas/, seguimiento/, faq/, contacto/, ...
-  assets/css/styles.css # Variables de la paleta en :root
-  assets/js/            # main.js, tramites.js, seguimiento.js
-  _headers              # Cabeceras de seguridad (CSP sin inline)
-  robots.txt            # Bloquea indexación (MVP)
+  assets/css/styles.css # Paleta en variables :root (--brown-*, --accent*)
+  assets/js/main.js     # Menú móvil
+  _headers, robots.txt  # Cabeceras de seguridad y bloqueo de indexación
 templates/
   pagina-base.html      # Copia esto para crear una página nueva (no se publica)
 wrangler.jsonc          # Config de Cloudflare (assets estáticos)
@@ -39,32 +34,17 @@ npm install
 npm run dev      # http://localhost:8787
 ```
 
-## Despliegue en Cloudflare (wrangler)
-
-Desde la terminal:
+## Despliegue en Cloudflare
 
 ```bash
 npx wrangler login
 npm run deploy   # = npx wrangler deploy
 ```
 
-Desde el panel de Cloudflare (Workers Builds, conectando este repo):
-
-- **Build command:** vacío
-- **Deploy command:** `npx wrangler deploy`
-- **Root directory:** `/`
-
-`wrangler.jsonc` ya apunta a `./public` y usa `404.html` como página de error. El nombre del Worker (`integracion-social`) debe coincidir con el del proyecto en Cloudflare.
-
-## Cómo personalizar
-
-- **Colores:** edita las variables `--brown-*` y `--accent*` al inicio de `public/assets/css/styles.css`.
-- **Nueva página:** copia `templates/pagina-base.html` a `public/<ruta>/index.html`, ajusta título y contenido, y agrégala al menú en el encabezado de cada página.
-- **Nuevo trámite:** duplica la carpeta de un trámite en `public/tramites/`, edita su contenido y agrega su tarjeta en `public/tramites/index.html` (con los atributos `data-*` que usa el filtro).
-- **Seguimiento real:** en `assets/js/seguimiento.js`, sustituye `buscarFolio` por una llamada a tu API.
-- **Indexación:** al pasar a producción, elimina `Disallow: /` de `robots.txt`, el `<meta name="robots">` de las páginas y la línea `X-Robots-Tag` de `_headers`.
+Desde el panel (Workers Builds): build command vacío, deploy command `npx wrangler deploy`. El nombre del Worker en `wrangler.jsonc` (`integracion-social`) debe coincidir con el del proyecto.
 
 ## Notas
 
-- La política CSP exige que no haya scripts ni estilos en línea; usa archivos en `assets/`.
-- Antes de publicar de forma oficial, reemplaza el aviso de privacidad, los datos de contacto y la leyenda de MVP.
+- La CSP de `_headers` no permite scripts ni estilos en línea; usa archivos en `assets/`.
+- `robots.txt`, la etiqueta `noindex` y `X-Robots-Tag` bloquean la indexación; quítalos al publicar.
+- Al agregar una página, añádela también al menú del encabezado.
