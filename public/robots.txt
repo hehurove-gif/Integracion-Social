@@ -1,0 +1,3 @@
+# MVP no oficial: no indexar.
+User-agent: *
+Disallow: /
